@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Setup guide
+    url: https://jcltravels.co.uk/rocketproxy/guide.html
+    about: How to import servers, subscriptions and rules.
+  - name: Email support
+    url: mailto:jcltravels@gmail.com
+    about: For account, subscription or billing questions.

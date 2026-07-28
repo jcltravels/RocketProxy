@@ -1,0 +1,85 @@
+name: Bug report
+description: Something isn't working in Rocket Proxy
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. The details below are what let us
+        reproduce and fix a problem quickly — especially the app version and protocol.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+      placeholder: "Tapped Connect and the tunnel stayed on 'Connecting' for 30s, then dropped."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Import a vless:// link
+        2. Choose Smart routing
+        3. Tap Connect
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - iPhone
+        - iPad
+        - Mac
+        - Apple TV
+    validations:
+      required: true
+  - type: input
+    id: os-version
+    attributes:
+      label: OS version
+      placeholder: "iOS 18.5"
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: App version
+      description: Find this in More ▸ Support ▸ Version.
+      placeholder: "1.4 (40)"
+    validations:
+      required: true
+  - type: dropdown
+    id: protocol
+    attributes:
+      label: Protocol / transport (if connection-related)
+      options:
+        - "Not connection-related"
+        - Shadowsocks
+        - ShadowsocksR
+        - VMess
+        - VLESS
+        - "VLESS + REALITY"
+        - Trojan
+        - Hysteria2
+        - TUIC
+        - Snell
+        - WireGuard
+        - SOCKS5
+        - "HTTP/HTTPS"
+        - Other
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs (optional)
+      description: More ▸ Diagnostics ▸ export. Please remove any server addresses, passwords, UUIDs or keys first.
+      render: text
+  - type: checkboxes
+    id: no-secrets
+    attributes:
+      label: Before submitting
+      options:
+        - label: I have removed server addresses, passwords, UUIDs and keys from anything I pasted.
+          required: true
