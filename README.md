@@ -5,9 +5,21 @@
 > server built in**, so there's no up-front purchase and no bring-your-own-server needed to start.
 > 21 languages.
 
-[![App Store](https://img.shields.io/badge/App_Store-Download-0D96F6?logo=apple&logoColor=white)](https://apps.apple.com/app/id6785291194) [![Platforms](https://img.shields.io/badge/platform-iOS%20%7C%20iPadOS%20%7C%20macOS%20%7C%20tvOS-lightgrey?logo=apple)](https://apps.apple.com/app/id6785291194) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
+[![App Store](https://img.shields.io/badge/App_Store-Download-0D96F6?logo=apple&logoColor=white)](https://apps.apple.com/app/id6785291194) [![macOS DMG](https://img.shields.io/badge/macOS-Free_direct_download-333333?logo=apple&logoColor=white)](https://github.com/jcltravels/RocketProxy/releases/latest) [![Platforms](https://img.shields.io/badge/platform-iOS%20%7C%20iPadOS%20%7C%20macOS%20%7C%20tvOS-lightgrey?logo=apple)](https://apps.apple.com/app/id6785291194) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 
-[**⬇️ Download on the App Store**](https://apps.apple.com/app/id6785291194) · [🌐 Website](https://jcltravels.co.uk/) · [📖 Setup guide](https://jcltravels.co.uk/rocketproxy/guide.html)
+[**⬇️ Download on the App Store**](https://apps.apple.com/app/id6785291194) · [**🖥️ Free macOS app (DMG)**](https://github.com/jcltravels/RocketProxy/releases/latest) · [🌐 Website](https://jcltravels.co.uk/rocketproxy/) · [📖 Setup guide](https://jcltravels.co.uk/rocketproxy/guide.html)
+
+### 🖥️ Free native macOS app — no App Store account needed
+
+The Mac app is also distributed directly, **completely free and unrestricted**: all 36 protocol
+configurations, no account, no time limit, no ads, no telemetry. Signed with a Developer ID and
+notarised by Apple. Requires macOS 13+ on Apple silicon.
+
+**[⬇️ Download Rocket Proxy for macOS](https://github.com/jcltravels/RocketProxy/releases/latest)**
+ · [direct from our site](https://jcltravels.co.uk/rocketproxy/#download)
+
+Premium high-speed servers, and the iPhone / iPad / Apple TV apps, are on the
+[App Store](https://apps.apple.com/app/id6785291194).
 
 ---
 
