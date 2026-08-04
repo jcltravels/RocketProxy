@@ -5,7 +5,7 @@
 > server built in**, so there's no up-front purchase and no bring-your-own-server needed to start.
 > 21 languages.
 
-[![App Store](https://img.shields.io/badge/App_Store-Download-0D96F6?logo=apple&logoColor=white)](https://apps.apple.com/app/id6785291194) [![macOS DMG](https://img.shields.io/badge/macOS-Free_direct_download-333333?logo=apple&logoColor=white)](https://github.com/jcltravels/RocketProxy/releases/latest) [![Platforms](https://img.shields.io/badge/platform-iOS%20%7C%20iPadOS%20%7C%20macOS%20%7C%20tvOS-lightgrey?logo=apple)](https://apps.apple.com/app/id6785291194) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
+[![App Store](https://img.shields.io/badge/App_Store-Download-0D96F6?logo=apple&logoColor=white)](https://apps.apple.com/app/id6785291194) [![macOS DMG](https://img.shields.io/badge/macOS-Free_direct_download-333333?logo=apple&logoColor=white)](https://github.com/jcltravels/RocketProxy/releases/latest) [![Platforms](https://img.shields.io/badge/platform-iOS%20%7C%20iPadOS%20%7C%20macOS%20%7C%20tvOS-lightgrey?logo=apple)](https://apps.apple.com/app/id6785291194) [![Rules & docs: MIT](https://img.shields.io/badge/rules_&_docs-MIT-green.svg)](./LICENSE)
 
 [**⬇️ Download on the App Store**](https://apps.apple.com/app/id6785291194) · [**🖥️ Free macOS app (DMG)**](https://github.com/jcltravels/RocketProxy/releases/latest) · [🌐 Website](https://jcltravels.co.uk/rocketproxy/) · [📖 Setup guide](https://jcltravels.co.uk/rocketproxy/guide.html)
 
@@ -13,7 +13,7 @@
 
 The Mac app is also distributed directly, **completely free and unrestricted**: all 36 protocol
 configurations, no account, no time limit, no ads, no telemetry. Signed with a Developer ID and
-notarised by Apple. Requires macOS 13+ on Apple silicon.
+notarised by Apple. Universal binary — **Intel and Apple silicon** — macOS 13 or later.
 
 **[⬇️ Download Rocket Proxy for macOS](https://github.com/jcltravels/RocketProxy/releases/latest)**
  · [direct from our site](https://jcltravels.co.uk/rocketproxy/#download)
@@ -44,7 +44,10 @@ Both are great Xray/v2ray-compatible clients that run across the Apple ecosystem
 
 ## Supported protocols
 
-Shadowsocks · Shadowsocks-2022 · VMess · VLESS (+ REALITY / XTLS-Vision) · Trojan · Hysteria2 · TUIC · Snell · WireGuard · SOCKS5 · HTTP
+Shadowsocks · Shadowsocks-2022 · ShadowsocksR · VMess · VLESS (+ REALITY / XTLS-Vision) · Trojan · Hysteria · Hysteria2 · TUIC · Juicity · Snell · Brook · Mieru · WireGuard · AmneziaWG · OpenConnect · SOCKS5 · HTTP
+
+With gRPC, WebSocket, HTTPUpgrade, xHTTP, mKCP and QUIC transports, plus
+ShadowTLS, Cloak, SimpleObfs, v2ray-plugin and kcptun obfuscation.
 
 Import a single `ss://` / `vmess://` / `vless://` / `trojan://` link, scan a QR code, or subscribe to a remote config URL — the same links you already use in Shadowrocket.
 
@@ -71,6 +74,34 @@ Rocket Proxy reads the same formats:
 - **Rules:** DOMAIN / DOMAIN-SUFFIX / DOMAIN-KEYWORD / IP-CIDR / GEOIP / FINAL, plus remote rule-set modules.
 
 See the full walkthrough (with screenshots): **https://jcltravels.co.uk/rocketproxy/guide.html**
+
+---
+
+## Coming from Clash or Stash? Bring the whole YAML
+
+Rocket Proxy reads **Clash / Stash / Mihomo YAML in full** — not just the server
+list. Your `proxy-groups`, `rules`, `rule-providers`, `proxy-providers` and `dns`
+section all come across, so the routing you already rely on keeps working.
+
+Point it at your existing subscription URL, open a `.yaml` file, paste it, or scan
+a QR code.
+
+> **Available now** in the free macOS app above. Coming to iPhone, iPad and
+> Apple TV in the 2.0 update.
+
+Walkthrough: **https://jcltravels.co.uk/guides/import.html**
+
+---
+
+## We publish our DNS-leak test method, not just the claim
+
+Every proxy client says it doesn't leak DNS. We publish **how we checked** — a
+packet capture on the physical interface, and the control test that proves the
+check can detect a leak at all (VPN down: 29 DNS packets captured; VPN up: 0,
+with the capture proven live). **36 of 36** protocol/transport combinations
+verified clean, with a `tcpdump` recipe so you can reproduce it yourself.
+
+**https://jcltravels.co.uk/guides/dns-leak-testing.html**
 
 ---
 
