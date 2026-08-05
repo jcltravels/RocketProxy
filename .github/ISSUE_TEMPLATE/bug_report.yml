@@ -26,6 +26,20 @@ body:
     validations:
       required: true
   - type: dropdown
+    id: area
+    attributes:
+      label: What area is this in?
+      options:
+        - "Connecting / staying connected"
+        - "Importing a Clash / Stash / Mihomo YAML config"
+        - "Importing a link, QR code or subscription"
+        - "Routing rules"
+        - "Ad blocking / DNS"
+        - "Premium, purchases or referrals"
+        - "Interface, translation or something else"
+    validations:
+      required: true
+  - type: dropdown
     id: platform
     attributes:
       label: Platform
@@ -70,6 +84,17 @@ body:
         - SOCKS5
         - "HTTP/HTTPS"
         - Other
+  - type: textarea
+    id: config-snippet
+    attributes:
+      label: Config that didn't import (optional)
+      description: |
+        If a Clash / Stash / Mihomo YAML didn't come across correctly, the smallest
+        snippet that reproduces it is the single most useful thing you can give us —
+        usually the `proxy-groups`, `rules` or `proxy-providers` block involved.
+        **Replace every server address, password, UUID and key with `REDACTED` first.**
+        If the app showed an import report, please paste what it said was skipped.
+      render: yaml
   - type: textarea
     id: logs
     attributes:
