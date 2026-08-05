@@ -14,8 +14,13 @@ A ready-to-use config for **[Rocket Proxy](https://apps.apple.com/app/id67852911
 3. Add your own server (or connect the built-in free demo), pick it, connect.
 4. Enable **auto-update** so the rule lists refresh themselves.
 
-## Rule matching reference (Shadowrocket-compatible)
+## Rule matching reference
 `DOMAIN`, `DOMAIN-SUFFIX`, `DOMAIN-KEYWORD`, `IP-CIDR`, `GEOIP`, `RULE-SET`, `FINAL`.
+
+Clash / Stash YAML configs additionally bring across `GEOSITE`, `IP-CIDR6`,
+`SRC-IP-CIDR`, `SRC-PORT`, `DST-PORT`, logical `AND` / `OR` / `NOT`, and the
+`no-resolve` modifier — along with `proxy-groups`, `rule-providers` and
+`proxy-providers`. Drop a `.yaml` in the same **Add** box; no conversion needed.
 
 > Rule lists are pulled from well-maintained community sources and updated automatically.
 > Want a whitelist (proxy-all-except-CN) variant? Open an issue.

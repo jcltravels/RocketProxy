@@ -1,9 +1,10 @@
 # Rocket Proxy — a free, Shadowrocket-compatible proxy client (iPhone · iPad · Mac · Apple TV)
 
 > **Your internet, your rules.** A fast, modern proxy client for **iPhone, iPad, Mac & Apple TV**
-> that imports your existing Shadowrocket / v2ray / Xray configs. **Free to try — with a demo
-> server built in**, so there's no up-front purchase and no bring-your-own-server needed to start.
-> 21 languages.
+> that imports your existing Shadowrocket / v2ray / Xray configs — and reads
+> **Clash / Stash / Mihomo YAML in full**, proxy-groups and rules included, with no
+> converter. **Free to try — with a demo server built in**, so there's no up-front
+> purchase and no bring-your-own-server needed to start. 21 languages.
 
 [![App Store](https://img.shields.io/badge/App_Store-Download-0D96F6?logo=apple&logoColor=white)](https://apps.apple.com/app/id6785291194) [![macOS DMG](https://img.shields.io/badge/macOS-Free_direct_download-333333?logo=apple&logoColor=white)](https://github.com/jcltravels/RocketProxy/releases/latest) [![Platforms](https://img.shields.io/badge/platform-iOS%20%7C%20iPadOS%20%7C%20macOS%20%7C%20tvOS-lightgrey?logo=apple)](https://apps.apple.com/app/id6785291194) [![Rules & docs: MIT](https://img.shields.io/badge/rules_&_docs-MIT-green.svg)](./LICENSE)
 
@@ -35,10 +36,41 @@ Both are great Xray/v2ray-compatible clients that run across the Apple ecosystem
 | Managed premium servers | ❌ (client only) | ✅ (UK + more coming) |
 | Referral — give a month, get a month | ❌ | ✅ |
 | Imports SS / SSR / VMess / VLESS / Trojan | ✅ | ✅ |
+| Imports **Clash / Stash / Mihomo YAML** | converter needed | ✅ **native, in full** |
 | Protocols: SS-2022, REALITY, Hysteria2, TUIC, WireGuard | ✅ | ✅ |
 | Languages | — | **21** |
 
-**The one-liner:** Rocket Proxy is a free-to-try, Shadowrocket-compatible client that **comes with its own servers** — try it in one tap, no up-front purchase and no hunting for a server.
+<sub>Shadowrocket uses a Surge-style <code>.conf</code> format and does not parse Clash YAML, so a
+subconverter is the usual route. Rocket Proxy reads the YAML directly. Everything else in this
+table is a factual difference in what's included, not a claim about quality — Shadowrocket is a
+good app.</sub>
+
+**The one-liner:** Rocket Proxy is a free-to-try, Shadowrocket-compatible client that **reads your Clash or Stash YAML as-is** and **comes with its own servers** — try it in one tap, no up-front purchase and no hunting for a server.
+
+---
+
+## Coming from Clash or Stash? Bring the whole YAML
+
+Importing a Clash config often means the server list survives and the rest doesn't.
+Rocket Proxy reads **Clash / Stash / Mihomo YAML in full** — the parts that
+actually took you time to get right come across and keep working:
+
+- **`proxy-groups`** — `select`, `url-test`, `fallback`, `load-balance` and `relay`,
+  with `filter` / `exclude-filter` / `exclude-type` regex and `include-all`
+- **`rules`** — `DOMAIN`, `DOMAIN-SUFFIX`, `DOMAIN-KEYWORD`, `IP-CIDR`, `IP-CIDR6`,
+  `GEOIP`, `GEOSITE`, `SRC-IP-CIDR`, `SRC-PORT`, `DST-PORT`, `RULE-SET`, `MATCH`,
+  plus logical `AND` / `OR` / `NOT` and the `no-resolve` modifier
+- **`rule-providers` and `proxy-providers`** — so your subscription keeps updating itself
+- **`dns`** — carried across and editable, not silently replaced
+
+Point it at your existing subscription URL, open a `.yaml` file, paste it, or scan
+a QR code. You get an **import report** listing exactly what came across — and if
+something didn't, what it was.
+
+> **Available now** in the free macOS app above. Coming to iPhone, iPad and
+> Apple TV in the 2.0 update.
+
+Walkthrough: **https://jcltravels.co.uk/guides/import.html**
 
 ---
 
@@ -49,7 +81,7 @@ Shadowsocks · Shadowsocks-2022 · ShadowsocksR · VMess · VLESS (+ REALITY / X
 With gRPC, WebSocket, HTTPUpgrade, xHTTP, mKCP and QUIC transports, plus
 ShadowTLS, Cloak, SimpleObfs, v2ray-plugin and kcptun obfuscation.
 
-Import a single `ss://` / `vmess://` / `vless://` / `trojan://` link, scan a QR code, or subscribe to a remote config URL — the same links you already use in Shadowrocket.
+Import a single `ss://` / `vmess://` / `vless://` / `trojan://` link, scan a QR code, subscribe to a remote config URL, or hand it a **Clash / Stash YAML** file — the same links and configs you already use elsewhere.
 
 ---
 
@@ -63,33 +95,21 @@ Import a single `ss://` / `vmess://` / `vless://` / `trojan://` link, scan a QR 
 
 ---
 
-## How to import your existing Shadowrocket config
+## How to import an existing config
 
-Rocket Proxy reads the same formats:
+Rocket Proxy reads the same formats you already have:
 
 - **Single node:** paste any `ss://`, `ssr://`, `vmess://`, `vless://`, `trojan://`, `hysteria2://`, `tuic://` URI.
+- **Clash / Stash / Mihomo YAML:** a `.yaml` file, a pasted document, or a subscription URL that serves YAML — parsed natively, no subconverter. [Details above](#coming-from-clash-or-stash-bring-the-whole-yaml).
 - **QR code:** scan directly in-app.
 - **Subscription:** add your provider's remote subscription URL — it auto-updates.
 - **Sub-Store:** point Rocket Proxy at your [Sub-Store](https://github.com/sub-store-org/Sub-Store) URI/Shadowrocket subscription output — it imports directly.
 - **Rules:** DOMAIN / DOMAIN-SUFFIX / DOMAIN-KEYWORD / IP-CIDR / GEOIP / FINAL, plus remote rule-set modules.
 
+Rocket Proxy detects the format for you, so the same **Add** box takes a single
+link, a subscription URL or a YAML config without you having to say which it is.
+
 See the full walkthrough (with screenshots): **https://jcltravels.co.uk/rocketproxy/guide.html**
-
----
-
-## Coming from Clash or Stash? Bring the whole YAML
-
-Rocket Proxy reads **Clash / Stash / Mihomo YAML in full** — not just the server
-list. Your `proxy-groups`, `rules`, `rule-providers`, `proxy-providers` and `dns`
-section all come across, so the routing you already rely on keeps working.
-
-Point it at your existing subscription URL, open a `.yaml` file, paste it, or scan
-a QR code.
-
-> **Available now** in the free macOS app above. Coming to iPhone, iPad and
-> Apple TV in the 2.0 update.
-
-Walkthrough: **https://jcltravels.co.uk/guides/import.html**
 
 ---
 
