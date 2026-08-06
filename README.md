@@ -24,28 +24,28 @@ Premium high-speed servers, and the iPhone / iPad / Apple TV apps, are on the
 
 ---
 
-## Why Rocket Proxy if you already use Shadowrocket?
+## Why Rocket Proxy if you already use Shadowrocket or Stash?
 
-Both are great Xray/v2ray-compatible clients that run across the Apple ecosystem. The difference is how you get started and what's included:
+All three are capable clients that run across the Apple ecosystem. The differences are
+in how you get started, what's included, and what config format each one speaks natively:
 
-| | Shadowrocket | **Rocket Proxy** |
-|---|:---:|:---:|
-| iPhone · iPad · Mac · Apple TV | ✅ | ✅ |
-| Price | $2.99 (paid up front) | **Free to try** |
-| Server included to start | ❌ (bring your own) | ✅ **free demo built in** |
-| Managed premium servers | ❌ (client only) | ✅ (UK + more coming) |
-| Referral — give a month, get a month | ❌ | ✅ |
-| Imports SS / SSR / VMess / VLESS / Trojan | ✅ | ✅ |
-| Imports **Clash / Stash / Mihomo YAML** | converter needed | ✅ **native, in full** |
-| Protocols: SS-2022, REALITY, Hysteria2, TUIC, WireGuard | ✅ | ✅ |
-| Languages | — | **21** |
+| | Shadowrocket | Stash | **Rocket Proxy** |
+|---|:---:|:---:|:---:|
+| iPhone · iPad · Apple TV | ✅ | ✅ | ✅ |
+| Mac app | ✅ | ✅ **sold separately** | ✅ **free** |
+| Price to start | $2.99 up front | $5.99 up front (iOS) | **Free to try** |
+| Mac app cost | included | £12/yr, or £48 lifetime | **£0 — free, notarized, universal** |
+| Server included to start | ❌ (bring your own) | ❌ (bring your own) | ✅ **free demo built in** |
+| Managed premium servers | ❌ (client only) | ❌ (client only) | ✅ (UK + more coming) |
+| Referral — give a month, get a month | ❌ | ❌ | ✅ |
+| Imports SS / SSR / VMess / VLESS / Trojan | ✅ | ✅ | ✅ |
+| Imports **Clash / Stash / Mihomo YAML** | converter needed | ✅ (its native format) | ✅ **native, in full** |
+| Protocols: SS-2022, REALITY, Hysteria2, TUIC, WireGuard | ✅ | ✅ | ✅ |
+| Track record | long-established | 4.4★, 1,200+ ratings | **new — we're the newcomer here** |
 
-<sub>Shadowrocket uses a Surge-style <code>.conf</code> format and does not parse Clash YAML, so a
-subconverter is the usual route. Rocket Proxy reads the YAML directly. Everything else in this
-table is a factual difference in what's included, not a claim about quality — Shadowrocket is a
-good app.</sub>
+<sub><b>Sourced:</b> prices from the App Store (US) and <a href="https://stash.ws/macos/pricing">stash.ws/macos/pricing</a>, checked 2026-08-06; Stash macOS pricing was discounted at the time of checking. <b>To be explicit about what is <i>not</i> a difference:</b> Stash reads Clash YAML because it <i>is</i> Stash's native format, and Stash ships iOS, tvOS and macOS apps too — we don't claim an edge on either. Shadowrocket uses a Surge-style <code>.conf</code> format and does not parse Clash YAML, so a subconverter is the usual route there. Where we do differ is cost and what's bundled. Both Shadowrocket and Stash are good, mature apps with far longer track records than ours — this table is about what's included, not about quality.</sub>
 
-**The one-liner:** Rocket Proxy is a free-to-try, Shadowrocket-compatible client that **reads your Clash or Stash YAML as-is** and **comes with its own servers** — try it in one tap, no up-front purchase and no hunting for a server.
+**The one-liner:** Rocket Proxy is a free-to-try client that **reads your Shadowrocket, Clash or Stash config as-is** and **comes with its own servers** — try it in one tap, with no up-front purchase, no separate Mac licence, and no hunting for a server.
 
 ---
 
