@@ -1,14 +1,14 @@
-# Rocket Proxy — a free, Shadowrocket-compatible proxy client (iPhone · iPad · Mac · Apple TV)
+# Rocket Proxy — a free, Shadowrocket-compatible proxy client (iPhone · iPad · Mac · Apple TV · Android)
 
-> **Your internet, your rules.** A fast, modern proxy client for **iPhone, iPad, Mac & Apple TV**
-> that imports your existing Shadowrocket / v2ray / Xray configs — and reads
+> **Your internet, your rules.** A fast, modern proxy client for **iPhone, iPad, Mac, Apple TV
+> and Android** that imports your existing Shadowrocket / v2ray / Xray configs — and reads
 > **Clash / Stash / Mihomo YAML in full**, proxy-groups and rules included, with no
 > converter. **Free to try — with a demo server built in**, so there's no up-front
 > purchase and no bring-your-own-server needed to start. 21 languages.
 
-[![App Store](https://img.shields.io/badge/App_Store-Download-0D96F6?logo=apple&logoColor=white)](https://apps.apple.com/app/id6785291194) [![macOS DMG](https://img.shields.io/badge/macOS-Free_direct_download-333333?logo=apple&logoColor=white)](https://github.com/jcltravels/RocketProxy/releases/latest) [![Platforms](https://img.shields.io/badge/platform-iOS%20%7C%20iPadOS%20%7C%20macOS%20%7C%20tvOS-lightgrey?logo=apple)](https://apps.apple.com/app/id6785291194) [![Rules & docs: MIT](https://img.shields.io/badge/rules_&_docs-MIT-green.svg)](./LICENSE)
+[![App Store](https://img.shields.io/badge/App_Store-Download-0D96F6?logo=apple&logoColor=white)](https://apps.apple.com/app/id6785291194) [![macOS DMG](https://img.shields.io/badge/macOS-Free_direct_download-333333?logo=apple&logoColor=white)](https://github.com/jcltravels/RocketProxy/releases/latest) [![Android APK](https://img.shields.io/badge/Android-Free_APK_download-3DDC84?logo=android&logoColor=white)](https://github.com/jcltravels/RocketProxy/releases/latest) [![Platforms](https://img.shields.io/badge/platform-iOS%20%7C%20iPadOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20Android-lightgrey)](https://github.com/jcltravels/RocketProxy/releases/latest) [![Rules & docs: MIT](https://img.shields.io/badge/rules_&_docs-MIT-green.svg)](./LICENSE)
 
-[**⬇️ Download on the App Store**](https://apps.apple.com/app/id6785291194) · [**🖥️ Free macOS app (DMG)**](https://github.com/jcltravels/RocketProxy/releases/latest) · [🌐 Website](https://jcltravels.co.uk/rocketproxy/) · [📖 Setup guide](https://jcltravels.co.uk/rocketproxy/guide.html)
+[**⬇️ Download on the App Store**](https://apps.apple.com/app/id6785291194) · [**🖥️ Free macOS app (DMG)**](https://github.com/jcltravels/RocketProxy/releases/latest) · [**🤖 Free Android app (APK)**](https://github.com/jcltravels/RocketProxy/releases/latest) · [🌐 Website](https://jcltravels.co.uk/rocketproxy/) · [📖 Setup guide](https://jcltravels.co.uk/rocketproxy/guide.html)
 
 ### 🖥️ Free native macOS app — no App Store account needed
 
@@ -18,6 +18,43 @@ notarised by Apple. Universal binary — **Intel and Apple silicon** — macOS 1
 
 **[⬇️ Download Rocket Proxy for macOS](https://github.com/jcltravels/RocketProxy/releases/latest)**
  · [direct from our site](https://jcltravels.co.uk/rocketproxy/#download)
+
+### 🤖 Free Android app — direct APK download
+
+The Android app is free and unrestricted too, and is published here as a **direct APK
+download** for people who can't reach the Play Store. **Android 8.0 or later, 64-bit
+(arm64) devices** — that's every Android phone sold for years, but it does mean the app
+won't install on an old 32-bit-only handset.
+
+**[⬇️ Download Rocket Proxy for Android](https://github.com/jcltravels/RocketProxy/releases/latest)**
+ · [direct from our site](https://jcltravels.co.uk/rocketproxy/#download)
+
+On first install Android will say the source isn't allowed — tap **Settings**, permit
+installs from your browser, then go back and install. The APK is signed with our own
+key and registered with Google's Android developer verification, so it installs without
+the "unverified developer" block.
+
+**Check what you downloaded before you install it.** If you're in a place where a
+download might be tampered with, this is the step that matters:
+
+```sh
+shasum -a 256 RocketProxy-*.apk          # compare against SHA256SUMS.txt in the release
+apksigner verify --print-certs RocketProxy-*.apk
+# expected SHA-256 certificate digest:
+# 96:12:4F:3C:20:E5:05:E0:82:28:2B:AD:42:94:57:30:10:62:65:6D:56:32:0E:59:EE:59:4D:E9:2F:C4:A2:09
+```
+
+> **Heads-up if you also use the Play build.** This APK and the Play build are signed with
+> different keys, so **they cannot update one another**. Pick one and stay with it —
+> switching means uninstalling first, and an uninstall does not carry your servers and
+> rules across, so export them before you switch.
+
+**One thing the Android app does that the Apple apps can't: per-app routing.** Choose
+exactly which apps go through the tunnel (an allow list) or which ones bypass it (a deny
+list). This is Android-only by platform design — on iPhone, iPad and Apple TV, per-app
+VPN is something only a managed-device (MDM) profile can do, so no App Store app can
+offer it. Android also has always-on / auto-connect and a network policy (Wi-Fi only,
+mobile only, or any).
 
 Premium high-speed servers, and the iPhone / iPad / Apple TV apps, are on the
 [App Store](https://apps.apple.com/app/id6785291194).
@@ -43,7 +80,7 @@ in how you get started, what's included, and what config format each one speaks 
 | Protocols: SS-2022, REALITY, Hysteria2, TUIC, WireGuard | ✅ | ✅ | ✅ |
 | Track record | long-established | 4.4★, 1,200+ ratings | **new — we're the newcomer here** |
 
-<sub><b>Sourced:</b> prices from the App Store (US) and <a href="https://stash.ws/macos/pricing">stash.ws/macos/pricing</a>, checked 2026-08-06; Stash macOS pricing was discounted at the time of checking. <b>To be explicit about what is <i>not</i> a difference:</b> Stash reads Clash YAML because it <i>is</i> Stash's native format, and Stash ships iOS, tvOS and macOS apps too — we don't claim an edge on either. Shadowrocket uses a Surge-style <code>.conf</code> format and does not parse Clash YAML, so a subconverter is the usual route there. Where we do differ is cost and what's bundled. Both Shadowrocket and Stash are good, mature apps with far longer track records than ours — this table is about what's included, not about quality.</sub>
+<sub><b>Sourced:</b> prices from the App Store (US) and <a href="https://stash.ws/macos/pricing">stash.ws/macos/pricing</a>, checked 2026-08-06; Stash macOS pricing was discounted at the time of checking. <b>Scope:</b> this table compares the <i>Apple</i> apps, which is where all three have the longest history — it is not a comparison of anyone's Android app. Shadowrocket and Stash both have Android offerings of their own, so having an Android app is not something we claim as a point of difference. <b>To be explicit about what is <i>not</i> a difference:</b> Stash reads Clash YAML because it <i>is</i> Stash's native format, and Stash ships iOS, tvOS and macOS apps too — we don't claim an edge on either. Shadowrocket uses a Surge-style <code>.conf</code> format and does not parse Clash YAML, so a subconverter is the usual route there. Where we do differ is cost and what's bundled. Both Shadowrocket and Stash are good, mature apps with far longer track records than ours — this table is about what's included, not about quality.</sub>
 
 **The one-liner:** Rocket Proxy is a free-to-try client that **reads your Shadowrocket, Clash or Stash config as-is** and **comes with its own servers** — try it in one tap, with no up-front purchase, no separate Mac licence, and no hunting for a server.
 
@@ -67,8 +104,12 @@ Point it at your existing subscription URL, open a `.yaml` file, paste it, or sc
 a QR code. You get an **import report** listing exactly what came across — and if
 something didn't, what it was.
 
-> **Available now** in the free macOS app above. Coming to iPhone, iPad and
-> Apple TV in the 2.0 update.
+> **Available now** on macOS, iPhone, iPad and Android.
+>
+> **On Android, two things are not ported yet:** `rule-providers` / `proxy-providers`
+> (so a subscription won't refresh itself there — the nodes and rules import fine, they
+> just don't auto-update), and `GEOSITE` rules. Everything else in the list above works.
+> If you rely on providers, use the macOS or iOS app for now.
 
 Walkthrough: **https://jcltravels.co.uk/guides/import.html**
 
@@ -87,7 +128,7 @@ Import a single `ss://` / `vmess://` / `vless://` / `trojan://` link, scan a QR 
 
 ## Try it in one tap
 
-1. Install **[Rocket Proxy](https://apps.apple.com/app/id6785291194)** (iPhone / iPad / Mac / Apple TV).
+1. Install **Rocket Proxy** — [App Store](https://apps.apple.com/app/id6785291194) (iPhone / iPad / Mac / Apple TV), or the free [macOS DMG / Android APK](https://github.com/jcltravels/RocketProxy/releases/latest).
 2. Open the app — a **free shared demo server is built in**. Just tap **Connect** to try it.
 3. For everyday use, import your own server (any `ss://` / `vmess://` / `vless://` / `trojan://` link or subscription), or unlock **Premium** for dedicated high-speed servers.
 
@@ -169,9 +210,10 @@ See the [Privacy Policy](https://jcltravels.co.uk/rocketproxy/privacy.html).
 ## Links
 
 - App Store: https://apps.apple.com/app/id6785291194
+- Free macOS app + Android APK: https://github.com/jcltravels/RocketProxy/releases/latest
 - Website: https://jcltravels.co.uk/
 - Setup guide: https://jcltravels.co.uk/rocketproxy/guide.html
 - Support: https://jcltravels.co.uk/support.html
 - Privacy: https://jcltravels.co.uk/privacy.html
 
-<sub>Topics: `shadowrocket` `shadowrocket-alternative` `v2ray` `xray` `vless` `vmess` `trojan` `shadowsocks` `hysteria2` `tuic` `reality` `proxy` `ios` `macos` `tvos` `apple-tv`</sub>
+<sub>Topics: `shadowrocket` `shadowrocket-alternative` `v2ray` `xray` `vless` `vmess` `trojan` `shadowsocks` `hysteria2` `tuic` `reality` `proxy` `ios` `macos` `tvos` `apple-tv` `android` `apk` `clash` `stash`</sub>
