@@ -6,9 +6,9 @@
 > converter. **Free to try — with a demo server built in**, so there's no up-front
 > purchase and no bring-your-own-server needed to start. 21 languages.
 
-[![App Store](https://img.shields.io/badge/App_Store-Download-0D96F6?logo=apple&logoColor=white)](https://apps.apple.com/app/id6785291194) [![macOS DMG](https://img.shields.io/badge/macOS-Free_direct_download-333333?logo=apple&logoColor=white)](https://github.com/jcltravels/RocketProxy/releases/latest) [![Android APK](https://img.shields.io/badge/Android-Free_APK_download-3DDC84?logo=android&logoColor=white)](https://github.com/jcltravels/RocketProxy/releases/latest) [![Platforms](https://img.shields.io/badge/platform-iOS%20%7C%20iPadOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20Android-lightgrey)](https://github.com/jcltravels/RocketProxy/releases/latest) [![Rules & docs: MIT](https://img.shields.io/badge/rules_&_docs-MIT-green.svg)](./LICENSE)
+[![App Store](https://img.shields.io/badge/App_Store-Download-0D96F6?logo=apple&logoColor=white)](https://apps.apple.com/app/id6785291194) [![macOS DMG](https://img.shields.io/badge/macOS-Free_direct_download-333333?logo=apple&logoColor=white)](https://github.com/jcltravels/RocketProxy/releases/latest) [![Android APK](https://img.shields.io/badge/Android-Free_APK_download-3DDC84?logo=android&logoColor=white)](https://github.com/jcltravels/RocketProxy/releases/latest) [![Google Play](https://img.shields.io/badge/Google_Play-Get_the_app-414141?logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=uk.co.jcltravels.rocketproxy) [![Platforms](https://img.shields.io/badge/platform-iOS%20%7C%20iPadOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20Android-lightgrey)](https://github.com/jcltravels/RocketProxy/releases/latest) [![Rules & docs: MIT](https://img.shields.io/badge/rules_&_docs-MIT-green.svg)](./LICENSE)
 
-[**⬇️ Download on the App Store**](https://apps.apple.com/app/id6785291194) · [**🖥️ Free macOS app (DMG)**](https://github.com/jcltravels/RocketProxy/releases/latest) · [**🤖 Free Android app (APK)**](https://github.com/jcltravels/RocketProxy/releases/latest) · [🌐 Website](https://jcltravels.co.uk/rocketproxy/) · [📖 Setup guide](https://jcltravels.co.uk/rocketproxy/guide.html)
+[**⬇️ Download on the App Store**](https://apps.apple.com/app/id6785291194) · [**🖥️ Free macOS app (DMG)**](https://github.com/jcltravels/RocketProxy/releases/latest) · [**🤖 Free Android app (APK)**](https://github.com/jcltravels/RocketProxy/releases/latest) · [**▶️ Get it on Google Play**](https://play.google.com/store/apps/details?id=uk.co.jcltravels.rocketproxy) · [🌐 Website](https://jcltravels.co.uk/rocketproxy/) · [📖 Setup guide](https://jcltravels.co.uk/rocketproxy/guide.html)
 
 ### 🖥️ Free native macOS app — no App Store account needed
 
@@ -21,10 +21,13 @@ notarised by Apple. Universal binary — **Intel and Apple silicon** — macOS 1
 
 ### 🤖 Free Android app — direct APK download
 
-The Android app is free and unrestricted too, and is published here as a **direct APK
-download** for people who can't reach the Play Store. **Android 8.0 or later, 64-bit
+The Android app is free and unrestricted too. Get it from **Google Play** for automatic
+updates, or take the **direct APK download** published here if you can't reach the Play
+Store. **Android 8.0 or later, 64-bit
 (arm64) devices** — that's every Android phone sold for years, but it does mean the app
 won't install on an old 32-bit-only handset.
+
+[![Get it on Google Play](assets/google-play-badge.png)](https://play.google.com/store/apps/details?id=uk.co.jcltravels.rocketproxy)
 
 **[⬇️ Download Rocket Proxy for Android](https://github.com/jcltravels/RocketProxy/releases/latest)**
  · [direct from our site](https://jcltravels.co.uk/rocketproxy/#download)
@@ -238,9 +241,12 @@ See the [Privacy Policy](https://jcltravels.co.uk/rocketproxy/privacy.html).
 
 - App Store: https://apps.apple.com/app/id6785291194
 - Free macOS app + Android APK: https://github.com/jcltravels/RocketProxy/releases/latest
+- Google Play: https://play.google.com/store/apps/details?id=uk.co.jcltravels.rocketproxy
 - Website: https://jcltravels.co.uk/
 - Setup guide: https://jcltravels.co.uk/rocketproxy/guide.html
 - Support: https://jcltravels.co.uk/support.html
 - Privacy: https://jcltravels.co.uk/privacy.html
 
 <sub>Topics: `shadowrocket` `shadowrocket-alternative` `v2ray` `xray` `vless` `vmess` `trojan` `shadowsocks` `hysteria2` `tuic` `reality` `proxy` `ios` `macos` `tvos` `apple-tv` `android` `apk` `clash` `stash`</sub>
+
+<sub>Google Play and the Google Play logo are trademarks of Google LLC. Apple, the Apple logo, iPhone, iPad, Mac and Apple TV are trademarks of Apple Inc. App Store is a service mark of Apple Inc.</sub>

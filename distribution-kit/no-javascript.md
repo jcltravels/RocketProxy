@@ -53,6 +53,13 @@ next to each other and let the customer pick:
 This is not a worse experience than a dead link. It is a better one than the
 copy-paste it replaces.
 
+If you would rather show the official store badges than plain text links, take
+the artwork from Google's
+[badge generator](https://play.google.com/intl/en_us/badges/) and Apple's
+[marketing guidelines](https://developer.apple.com/app-store/marketing/guidelines/).
+Both vendors require their own unmodified artwork — do not redraw or recolour
+it — and both ask for a trademark attribution somewhere on the page.
+
 ### 2. Nothing checks the URL before the customer taps
 
 The script refuses a URL whose scheme is not on the accepted list and greys the
