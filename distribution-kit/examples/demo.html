@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rocket Proxy import button — demo</title>
+<style>
+  body { font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         margin: 0 auto; padding: 24px; max-width: 42em; color: #111; }
+  code { background: #f2f2f2; padding: .1em .35em; border-radius: 4px;
+         word-break: break-all; font-size: .9em; }
+  .row { margin: 28px 0; padding-top: 20px; border-top: 1px solid #e5e5e5; }
+  .rocket-proxy-button {
+    display: inline-flex; align-items: center; gap: .5em;
+    padding: .6em 1.1em; border-radius: 8px; background: #0d7f8a; color: #fff;
+    font-weight: 600; text-decoration: none; cursor: pointer;
+  }
+  .rocket-proxy-button[aria-disabled="true"] { opacity: .5; pointer-events: none; }
+  #out { white-space: pre-wrap; background: #f7f7f7; padding: 12px;
+         border-radius: 6px; font-size: .85em; }
+</style>
+</head>
+<body>
+
+<h1>Rocket Proxy import button</h1>
+<p>This page is the self-test for <code>rocket-proxy-button.js</code>. Open it on a
+phone and tap the buttons.</p>
+
+<div class="row">
+  <h2>1. A subscription</h2>
+  <a class="rocket-proxy-button" data-rocket-proxy
+     data-url="https://panel.example.com/sub/DEMO_TOKEN"
+     data-name="Demo Panel">Open in Rocket Proxy</a>
+</div>
+
+<div class="row">
+  <h2>2. A single node</h2>
+  <a class="rocket-proxy-button" data-rocket-proxy
+     data-url="vless://11111111-2222-3333-4444-555555555555@example.com:443?security=tls&sni=example.com#Demo%20Node"
+     data-name="Demo Node">Open in Rocket Proxy</a>
+</div>
+
+<div class="row">
+  <h2>3. A rejected link (expected: inert button + console error)</h2>
+  <a class="rocket-proxy-button" data-rocket-proxy
+     data-url="ftp://example.com/nodes.txt"
+     data-name="Bad Scheme">Open in Rocket Proxy</a>
+</div>
+
+<div class="row">
+  <h2>What this page generated</h2>
+  <div id="out">…</div>
+</div>
+
+<script src="../rocket-proxy-button.js"></script>
+<script>
+  var lines = [];
+  lines.push('platform detected: ' +
+    (/android/i.test(navigator.userAgent) ? 'android'
+      : /iphone|ipad|ipod/i.test(navigator.userAgent) ? 'ios' : 'desktop'));
+  document.querySelectorAll('[data-rocket-proxy]').forEach(function (el, i) {
+    lines.push((i + 1) + '. ' + (el.getAttribute('href') || '(rejected — inert)'));
+  });
+  document.getElementById('out').textContent = lines.join('\n\n');
+</script>
+
+</body>
+</html>

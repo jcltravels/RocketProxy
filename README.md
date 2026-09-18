@@ -181,6 +181,33 @@ A one-tap **[starter config](./rules/)** (ad-block + China-direct + proxy, auto-
 https://raw.githubusercontent.com/jcltravels/RocketProxy/main/rules/RocketProxy-Starter.conf
 ```
 
+## Panel operators: add a 1-click import button
+
+If you run a **Marzban**, **V2Board/Xboard** or **SSPanel-UIM** panel, your
+customers currently copy subscription URLs by hand — and paste them wrong.
+
+The **[distribution kit](./distribution-kit/)** replaces that with one button:
+a single `<a>` tag plus one ~4 KB dependency-free script, about five minutes to
+install.
+
+```html
+<a data-rocket-proxy
+   data-url="https://panel.example.com/sub/USER_TOKEN"
+   data-name="Example Net">Open in Rocket Proxy</a>
+
+<script src="/static/rocket-proxy-button.js"></script>
+```
+
+No API key, no account, no callback to us, no tracking. MIT-licensed. It never
+imports silently and never connects on its own — the app always shows a
+confirmation sheet naming the host first.
+
+Per-panel guides: [Marzban](./distribution-kit/panels/marzban.md) ·
+[V2Board & Xboard](./distribution-kit/panels/v2board-xboard.md) ·
+[SSPanel-UIM](./distribution-kit/panels/sspanel.md).
+Also in [简体中文](./distribution-kit/README.zh-CN.md) and
+[Русский](./distribution-kit/README.ru.md).
+
 ## Guides & tutorials
 
 - [Set up a proxy on Mac & Apple TV](https://gist.github.com/jcltravels/2e9ae2092c706c5f99b648addd726ce4)
