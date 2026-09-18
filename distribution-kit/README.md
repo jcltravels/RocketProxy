@@ -103,6 +103,11 @@ This URL works anywhere a link works: a QR code, a Telegram button, an email.
 The `<a>`-tag approach only exists to add the app-store fallback, which a bare
 link cannot do.
 
+**Cannot add a script to your panel?** [Building the link
+server-side](./no-javascript.md) has copy-paste snippets for PHP, Python, Jinja,
+Blade, Go, Telegram bots and QR codes — plus the one encoding mistake that
+makes a link behave differently on iPhone and Android, and how to avoid it.
+
 ### Types
 
 `type` is inferred from the scheme and you can normally leave it out:
@@ -148,6 +153,18 @@ for other clients, you do not need to do anything.
 * [V2Board and Xboard](./panels/v2board-xboard.md)
 * [SSPanel-UIM](./panels/sspanel.md)
 
+## Without JavaScript
+
+If your panel will not let you add a script — or you are sending the link from a
+Telegram bot, an email or a QR code — see [**Building the link
+server-side**](./no-javascript.md). Same link, no script file to host.
+
+## Logo and mark
+
+[`assets/`](./assets/README.md) has the mark as SVG (colour and monochrome) and
+the app icon as PNG, with guidance on which to use where. Copy them into your
+own static files; do not hotlink them.
+
 ---
 
 ## Troubleshooting
@@ -163,6 +180,15 @@ where you pasted the button.
 
 **The app opens but the address looks mangled, with `%253A` in it.**
 You encoded the URL before handing it to the script. Pass the raw URL.
+
+**The subscription is named differently on iPhone and Android — one shows a
+`+` where the other shows a space.**
+Your server built the link with an encoder that writes a space as `+` (PHP's
+`urlencode`, Ruby's `CGI.escape`, Go's `url.QueryEscape`). Android form-decodes
+that back to a space; iOS does not. Send `%20` for a space and `%2B` for a
+literal plus — see [the `+` trap](./no-javascript.md#the--trap). This matters
+more than it looks: the same decoding hits the subscription URL, so a `+` in a
+base64 token becomes a space on Android and the fetch fails.
 
 **The customer sees a warning about a plain-text address — or on Android, a
 refusal.**

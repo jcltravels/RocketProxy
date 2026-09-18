@@ -1,0 +1,21 @@
+<!--
+  Rocket Proxy mark — monochrome.
+
+  Inherits the surrounding text colour via `currentColor`, so it works on a
+  light panel and a dark one without you shipping two files. The colour mark
+  cannot do this: its fuselage is white and disappears on a light background.
+
+  The rings are deliberately absent. At the 16-24px a monochrome mark is used
+  at, three concentric hairlines collapse into a smudge; the rocket alone stays
+  readable. Keep at least 8px of clear space around it.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64"
+     fill="currentColor" role="img" aria-label="Rocket Proxy">
+  <title>Rocket Proxy</title>
+  <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M32 4 C38.4 12.6 41 23 41 31.5 L41 46 L23 46 L23 31.5 C23 23 25.6 12.6 32 4 Z
+           M32 18.5 A5.5 5.5 0 1 0 32 29.5 A5.5 5.5 0 1 0 32 18.5 Z"/>
+  <path d="M23 35 L15 45 L15 50 L23 46 Z"/>
+  <path d="M41 35 L49 45 L49 50 L41 46 Z"/>
+  <path d="M32 47 C28.6 51.5 27.8 55.2 32 60 C36.2 55.2 35.4 51.5 32 47 Z"/>
+</svg>

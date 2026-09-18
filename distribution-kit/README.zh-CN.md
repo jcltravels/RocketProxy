@@ -90,6 +90,10 @@ rocketproxy://import?url=https%3A%2F%2Fpanel.example.com%2Fsub%2FUSER_TOKEN&name
 这个链接在任何能放链接的地方都能用。上面的 `<a>` 标签方案只是额外提供了「未安装时跳应用商店」
 的兜底，这是纯链接做不到的。
 
+**面板不允许加脚本？** 请看[在服务端生成链接](./no-javascript.md)，其中提供了 PHP、Python、
+Jinja、Blade、Go、Telegram 机器人和二维码的可直接复制的代码，并说明了那个会导致同一条链接在
+iPhone 和 Android 上表现不一致的编码错误，以及如何避免。（该文档为英文版。）
+
 ### type 参数
 
 `type` 会根据协议头自动推断，通常可以省略：
@@ -131,6 +135,17 @@ rocketproxy://import?url=https%3A%2F%2Fpanel.example.com%2Fsub%2FUSER_TOKEN&name
 
 （以上文档为英文版。）
 
+## 不使用 JavaScript
+
+如果面板不允许加脚本，或者你是通过 Telegram 机器人、邮件、二维码来发送链接，
+请看[**在服务端生成链接**](./no-javascript.md)。链接完全相同，无需托管脚本文件。
+
+## 标志与图标
+
+[`assets/`](./assets/README.md) 提供 SVG 图标（彩色与单色）和 PNG 应用图标，
+并说明各自适用的场景。请复制到你自己的静态资源目录，不要直接外链我们的仓库。
+（以上文档为英文版。）
+
 ---
 
 ## 排查
@@ -144,6 +159,12 @@ rocketproxy://import?url=https%3A%2F%2Fpanel.example.com%2Fsub%2FUSER_TOKEN&name
 
 **应用打开了，但地址里出现 `%253A` 之类的乱码。**
 你在交给脚本之前自己编码过了。请传入原始地址。
+
+**订阅名称在 iPhone 和 Android 上不一致——一边显示 `+`，另一边显示空格。**
+你的服务端使用了把空格编码成 `+` 的函数（PHP 的 `urlencode`、Ruby 的 `CGI.escape`、
+Go 的 `url.QueryEscape`）。Android 会把它还原成空格，iOS 不会。空格请用 `%20`，
+真正的加号请用 `%2B`，详见[`+` 陷阱](./no-javascript.md#the--trap)。这比看上去更重要：
+同样的解码也作用于订阅地址，所以 base64 令牌里的 `+` 在 Android 上会变成空格，导致拉取失败。
 
 **用户看到明文传输的安全提示，在 Android 上则会被直接拒绝。**
 你的订阅地址是 `http://`。订阅地址本身等同于凭证，链路上任何一方都能读取并使用它。

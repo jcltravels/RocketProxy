@@ -1,0 +1,39 @@
+<!--
+  Rocket Proxy mark — flat vector.
+
+  This is NOT a trace of the app icon. The shipped icon is a rendered, glowing
+  raster image; reproduced as flat vector it would be neither faithful nor
+  legible at the 16-24px this file is actually used at. It reuses the icon's
+  two identifying elements — the rocket and the concentric signal rings — in
+  the icon's palette, and nothing else.
+
+  Use this next to the button. Use rocket-proxy-icon-512.png when you need the
+  real app icon (a download page, a store-style listing).
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64"
+     role="img" aria-label="Rocket Proxy">
+  <title>Rocket Proxy</title>
+
+  <!-- signal rings -->
+  <g fill="none" stroke="#2BD9F5" stroke-width="2">
+    <circle cx="32" cy="34" r="29" opacity=".18"/>
+    <circle cx="32" cy="34" r="22" opacity=".28"/>
+    <circle cx="32" cy="34" r="15" opacity=".40"/>
+  </g>
+
+  <!-- fins -->
+  <path d="M23 35 L15 45 L15 50 L23 46 Z" fill="#7FE9FA"/>
+  <path d="M41 35 L49 45 L49 50 L41 46 Z" fill="#7FE9FA"/>
+
+  <!-- exhaust -->
+  <path d="M32 47 C28.6 51.5 27.8 55.2 32 60 C36.2 55.2 35.4 51.5 32 47 Z"
+        fill="#2BD9F5"/>
+
+  <!-- fuselage -->
+  <path d="M32 4 C38.4 12.6 41 23 41 31.5 L41 46 L23 46 L23 31.5 C23 23 25.6 12.6 32 4 Z"
+        fill="#FFFFFF"/>
+
+  <!-- window -->
+  <circle cx="32" cy="24" r="5.5" fill="#0B1420"/>
+  <circle cx="32" cy="24" r="3.6" fill="#2BD9F5"/>
+</svg>
