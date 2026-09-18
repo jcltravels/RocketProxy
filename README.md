@@ -19,7 +19,7 @@ notarised by Apple. Universal binary — **Intel and Apple silicon** — macOS 1
 **[⬇️ Download Rocket Proxy for macOS](https://github.com/jcltravels/RocketProxy/releases/latest)**
  · [direct from our site](https://jcltravels.co.uk/rocketproxy/#download)
 
-### 🤖 Free Android app — direct APK download
+### 🤖 Free Android app — Google Play or direct APK
 
 The Android app is free and unrestricted too. Get it from **Google Play** for automatic
 updates, or take the **direct APK download** published here if you can't reach the Play
