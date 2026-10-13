@@ -59,8 +59,9 @@ VPN is something only a managed-device (MDM) profile can do, so no App Store app
 offer it. Android also has always-on / auto-connect and a network policy (Wi-Fi only,
 mobile only, or any).
 
-Premium high-speed servers, and the iPhone / iPad / Apple TV apps, are on the
-[App Store](https://apps.apple.com/app/id6785291194).
+Our high-speed servers come built into the [App Store](https://apps.apple.com/app/id6785291194) and
+[Google Play](https://play.google.com/store/apps/details?id=uk.co.jcltravels.rocketproxy) apps —
+[how to install them from any country](https://jcltravels.co.uk/rocketproxy/get-the-app.html).
 
 ---
 
@@ -76,7 +77,7 @@ in how you get started, what's included, and what config format each one speaks 
 | Price to start | $2.99 up front | $5.99 up front (iOS) | **Free to try** |
 | Mac app cost | included | £12/yr, or £48 lifetime | **£0 — free, notarized, universal** |
 | Server included to start | ❌ (bring your own) | ❌ (bring your own) | ✅ **free demo built in** |
-| Managed premium servers | ❌ (client only) | ❌ (client only) | ✅ (UK + more coming) |
+| Managed high-speed servers built in | ❌ (client only) | ❌ (client only) | ✅ (UK + more coming) |
 | Referral — give a month, get a month | ❌ | ❌ | ✅ |
 | Imports SS / SSR / VMess / VLESS / Trojan | ✅ | ✅ | ✅ |
 | Imports **Clash / Stash / Mihomo YAML** | converter needed | ✅ (its native format) | ✅ **native, in full** |
@@ -133,9 +134,9 @@ Import a single `ss://` / `vmess://` / `vless://` / `trojan://` link, scan a QR 
 
 1. Install **Rocket Proxy** — [App Store](https://apps.apple.com/app/id6785291194) (iPhone / iPad / Mac / Apple TV), or the free [macOS DMG / Android APK](https://github.com/jcltravels/RocketProxy/releases/latest).
 2. Open the app — a **free shared demo server is built in**. Just tap **Connect** to try it.
-3. For everyday use, import your own server (any `ss://` / `vmess://` / `vless://` / `trojan://` link or subscription), or unlock **Premium** for dedicated high-speed servers.
+3. For everyday use, import your own server (any `ss://` / `vmess://` / `vless://` / `trojan://` link or subscription).
 
-> The demo server is provisioned inside the app for trying Rocket Proxy. Add your own server or Premium for everyday use.
+> The demo server is provisioned inside the app for trying Rocket Proxy. Add your own server for everyday use.
 
 ---
 
@@ -169,11 +170,10 @@ verified clean, with a `tcpdump` recipe so you can reproduce it yourself.
 
 ---
 
-## Free vs Premium
+## Free trial vs store app
 
-- **Free:** import unlimited of your own servers + a built-in demo server to try the app.
-- **Premium:** dedicated high-speed servers (UK, more regions coming), IPv4 + IPv6, no shared limits.
-- **Referral:** give a friend a month, get a month free — [share your code](https://jcltravels.co.uk/).
+- **Free trial (DMG / APK / IPA downloads here):** the full app with no servers included — import unlimited servers of your own.
+- **App Store / Google Play:** our high-speed servers built in (UK, more regions coming), IPv4 + IPv6, automatic updates — [how to install from any country](https://jcltravels.co.uk/rocketproxy/get-the-app.html).
 
 ---
 
